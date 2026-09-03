@@ -45,3 +45,14 @@ TMS / WMS / GPS / fuel cards / ERP / invoices
 ## Repository conventions
 
 Do not commit production extracts, personal data, credentials, or Power BI service exports. Keep raw extracts in approved storage and use this repository for schemas, transformations, tests, and sanitized samples only.
+
+## Run the data pipeline
+
+The repository includes sanitized, representative CSV extracts in `data/raw/sample`. They are immutable inputs: the pipeline only reads them and writes a SQLite project database, clean staging CSVs, and a generated quality report.
+
+```bash
+python3 src/pipeline.py --as-of 2026-09-03
+python3 -m unittest discover -s tests -v
+```
+
+Outputs are `data/staging/route_profit.db`, cleaned staging tables, and [the quality report](reports/data_quality_report.md). The model and transformation rules are documented in [docs/data_model.md](docs/data_model.md) and [docs/transformation_log.md](docs/transformation_log.md).

@@ -1,0 +1,4 @@
+revenue_transaction_id,route_id,customer_id,revenue_amount,currency,posting_date,source_updated_at
+RT001,R1001,C001,9200.00,INR,2026-09-02,2026-09-02T22:00:00Z
+RT002,R1001,C002,7800.00,INR,2026-09-02,2026-09-02T22:00:00Z
+RT003,R1002,C001,12500.00,INR,2026-09-02,2026-09-02T22:00:00Z

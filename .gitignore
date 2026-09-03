@@ -1,14 +1,18 @@
 # Data and secrets
 data/raw/*
 !data/raw/.gitkeep
+!data/raw/sample/
+!data/raw/sample/*.csv
 data/staging/*
 !data/staging/.gitkeep
+!data/staging/*.db
 .env
 *.pbix
 *.pbit
 *.xlsx
 !excel/.gitkeep
 *.csv
+!data/raw/sample/*.csv
 
 # Local tooling
 .DS_Store

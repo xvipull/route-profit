@@ -1,0 +1,3 @@
+route_id,route_date,depot_code,lane_id,vehicle_id,carrier_id,planned_distance_km,actual_distance_km,planned_direct_cost,currency,source_updated_at
+R1001,2026-09-02,DEL01,DEL-JAI,V001,OWN,280.0,286.4,13500.00,INR,2026-09-02T06:45:00Z
+R1002,2026-09-02,DEL01,DEL-AGR,V002,OWN,210.0,205.8,10200.00,INR,2026-09-02T06:45:00Z
