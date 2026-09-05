@@ -53,6 +53,7 @@ The repository includes sanitized, representative CSV extracts in `data/raw/samp
 ```bash
 python3 src/pipeline.py --as-of 2026-09-03
 python3 src/apply_sql.py
+python3 src/advanced_analytics.py
 python3 -m pip install -r requirements-eda.txt
 python3 src/eda.py
 python3 -m unittest discover -s tests -v
@@ -61,3 +62,5 @@ python3 -m unittest discover -s tests -v
 Outputs are `data/staging/route_profit.db`, cleaned staging tables, and [the quality report](reports/data_quality_report.md). The model and transformation rules are documented in [docs/data_model.md](docs/data_model.md) and [docs/transformation_log.md](docs/transformation_log.md).
 
 KPI semantic views live in `sql/01_kpi_views.sql`; reconciliation controls and their INR 0.01 rounding tolerance live in `sql/02_reconciliation.sql`. The EDA script writes focused charts to `reports/figures` and findings to `reports/eda_summary.md`.
+
+`src/advanced_analytics.py` persists governed customer-route allocation and route-cluster outputs. Their allocation hierarchy, feature logic, and decision-use limitations are documented in [advanced analytics](docs/advanced_analytics.md).
